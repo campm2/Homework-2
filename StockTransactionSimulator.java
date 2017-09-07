@@ -39,11 +39,11 @@ import java.util.Scanner;
 
 public class StockTransactionSimulator{
    public static void main(String [] args){ 
-	   int numShares= 0;
+	   int numShares= 0; 
 	   double price_Per_Share= 0;
 	   int num_Shares_Sold=0;
 	   double priceSoldStock;
-	   final double comm_Rate=.02;
+	   final double COMMISSION_RATE=.02;
 	   String name= "";
 	   double brokerFee=0;
 	   double brokerFeeSharesSold=0;
@@ -76,10 +76,10 @@ public class StockTransactionSimulator{
 	   keyboard.close();
 	   
 	   //Calculate Broker fee when purchasing shares
-	   brokerFee=(price_Per_Share*numShares)*comm_Rate;
+	   brokerFee=(price_Per_Share*numShares)*COMMISSION_RATE;
 	   
 	   //Calculate Broker fee when shares were sold
-	   brokerFeeSharesSold= (priceSoldStock*num_Shares_Sold)*comm_Rate;
+	   brokerFeeSharesSold= (priceSoldStock*num_Shares_Sold)*COMMISSION_RATE;
 	   
 	   //To calculate the profit from selling stocks
 	   stockProfit=((priceSoldStock*num_Shares_Sold)-brokerFee-brokerFeeSharesSold-(price_Per_Share*numShares));
